@@ -10,7 +10,10 @@ public class PoliticasFacade {
 		if(hayFechaLibre) {
 			return new Turno(fecha);
 		}else {
-			return senado.forzarSobreTurnoPara(fecha);
+			IntergalacticApi intergalacticAPI = new IntergalacticApi();
+			intergalacticAPI.inizializar();
+			Autorizacion autorizacion = intergalacticAPI.pedirAutorizacionParaSobreTurno(fecha);
+			return senado.forzarSobreTurnoPara(fecha,autorizacion);
 			
 		}
 	}

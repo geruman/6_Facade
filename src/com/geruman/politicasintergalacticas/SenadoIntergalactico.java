@@ -16,15 +16,16 @@ public class SenadoIntergalactico {
 	}
 	public Boolean hayFechaDisponiblePara(Date fecha) {
 		Random r = new Random();
-		int randomInt = r.nextInt(0, 10);
+		int randomInt = r.nextInt(0, 100);
 		System.out.println("Simulando complejas interacciones para verificar fecha disponible");
 		System.out.println("Randomizado un:"+randomInt);
-		if(randomInt>4) {
+		if(randomInt>50) {
 			return false;
 		}
 		return true;
 	}
-	public Turno forzarSobreTurnoPara(Date fecha) {
+	public Turno forzarSobreTurnoPara(Date fecha, Autorizacion autorizacion) {
+		System.out.println("Verificar que esta autorizado el sobreturno..."+autorizacion.autorizada);
 		Turno turno = new Turno(fecha);
 		turno.setEsSobreTurno(true);
 		return turno;
