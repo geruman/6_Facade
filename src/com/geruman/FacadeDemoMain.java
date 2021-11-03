@@ -1,7 +1,9 @@
-package com.geruman.politicasintergalacticas;
+package com.geruman;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+
+import com.geruman.politicasintergalacticas.PoliticasFacade;
 
 public class FacadeDemoMain {
 	
